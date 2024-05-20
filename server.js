@@ -5,9 +5,10 @@ const Person = require("./models/Person");
 const Menu = require("./models/Menu");
 const PersonRoute = require("./Routes/PersonRoute");
 const MenuRoutes = require("./Routes/MenuRoutes");
+require("dotenv").config();
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3000;
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
@@ -24,5 +25,3 @@ app.use("/Menu", MenuRoutes);
 app.listen(port, () => {
   console.log("Server listening on port", port);
 });
-//hello sir
-//comment added for status
