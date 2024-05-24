@@ -30,6 +30,15 @@ let personSchema = new mongoose.Schema({
     required: true,
     type: Number,
   },
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
 });
 
 // create person model
